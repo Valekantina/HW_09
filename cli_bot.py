@@ -1,11 +1,11 @@
 from contact_list import contacts
-
+import time
 #creating parser function that will take user input and convert it to the known operation
 def parser(user_input: str):
     comm = None #commands
     param = [] # parameters
 
-#dict of all know to the bot operations
+#dict of all known to the bot operations
     operations = {
         "hello": hello,
         "hi": hello,
@@ -27,7 +27,7 @@ def parser(user_input: str):
                 param.append(i)
             return comm, param
     return comm, param
-# creating separate functions for help, hello and exit, as they do not require error handler
+# creating simple functions for help, hello and exit, as they do not require error handler
 def help(*args) -> str:
     return f"I know these commands: hello, help, add, change, phone, show all, good bye, bye, close, exit"
 
@@ -36,6 +36,7 @@ def hello() -> str:
 
 def exit():
     print(f"Good bye!")
+    time.sleep(1.5)
     quit()
 
 # creating main function thar will interact with the user
