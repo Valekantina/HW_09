@@ -36,7 +36,7 @@ def hello() -> str:
 
 def exit():
     print(f"Good bye!")
-    time.sleep(1.5)
+    time.sleep(1.5) # added delay on quit() so the message "Good bye!" is visible
     quit()
 
 # creating main function thar will interact with the user
