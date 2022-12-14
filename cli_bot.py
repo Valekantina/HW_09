@@ -18,6 +18,7 @@ def parser(user_input: str):
         "bye": exit,
         "close": exit,
         "exit": exit,
+        "phone": phone,
     }
     for k in operations:
         if user_input.lower().startswith(k):
